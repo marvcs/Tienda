@@ -5,11 +5,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/login.css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="center">
+            <form method="post"> <!<!-- cuando se requiere info del usuario -->
+                <h1>LOGIN</h1>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <label>Username</label>
+                    
+                </div>
+
+                <div class="txt_field">
+                    <input type="password" required>  
+                    <label>Password</label>                    
+                      
+                </div>   
+
+                <div class="pass">Forgot password</div>
+                <input type="submit" value="Login">   
+
+                <div class="signup">
+                    Not a member? <a href="#">Sign up</a>
+                </div>
+            </form>
+        </div> <!<!-- center -->
     </body>
 </html>

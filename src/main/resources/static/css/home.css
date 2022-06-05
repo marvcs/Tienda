@@ -6,4 +6,62 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : May 26, 2022, 6:04:24 PM
     Author     : XPC
 */
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Nuosu SIL', serif;
+}
+.container{
+    height:100vh;
+    width: 100%;
+    background-image: url(../images/background.png);
+    background-position:center;
+    background-size:cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position:relative;
+}
+.navbar{
+    height:15vh;
+    width:100%;
+    margin:auto;
+    display:flex; /*como se va alinear dentro caja - */
+    align-items: center;
+}
+.logo{
+    width:160px;
+    cursor:pointer;
+}
+nav{
+    flex:1;
+    padding-left: 160px;
+}
+nav ul li {
+    display: inline-block;
+    list-style:none;/*elimina los bullets*/
+    margin:0px 20px; /*espacio entre objetos*/
+}
+nav ul li a{
+    text-decoration: none; /*quitar subrayado*/
+    color:darkorchid; /*color de fuente*/
+}
+.content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top:24px;
+    margin-bottom: 15px;
+    color:darkorchid;
+}
+.content p {
+    font-size: 20px;
+    color:red;
+}
 
+.miImagen{
+    height:350px;
+    position:absolute;
+    botton:150px;
+    right:160px;
+}

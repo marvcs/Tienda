@@ -7,3 +7,118 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : XPC
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nuosu SIL', serif;
+    color: red;
+}
+body {
+    overflow: hidden; /*como se comporta lo que no cabe en ventana*/
+    background: linear-gradient(120deg,#65098C,#E6B8FA);
+    /*degradado en grados, color inicial, color final*/
+}
+.center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 400px;
+    background: green;
+    transform:translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position:relative;
+    border-botton: 2px solid silver;
+    margin: 30px 0;
+}
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height:40px;
+    font-size:40px;
+    border:none;
+    background:none;
+}
+.txt_field label{
+    position:absolute;
+    top:50%;
+    left:50px;
+    color: blue;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: azure;
+    cursor:pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input [type="submit"]{
+    width:100%;
+    height:50px;
+    border:1px solid;
+    
+    border-radius: 25px;
+    font-size:10px;
+    font-weight: 700;
+    cursor: pointer;
+    color:greenyellow;
+}
+input [type="submit"]:hover{
+    border-color: red;
+    background:blue;
+    transition: .5s;
+}
+.signup {
+    marginx:30px;
+    text-align: center;
+    font-size: 16px;
+    color:#666666;
+}
+.signup a {
+    color:#7FFFD4;
+    text-decoration: none;
+}
+.signup a:hover {
+    text-decoration: underline;
+}
+.txt_field span::before{ /**/
+    content: '';
+    position:absolute;
+    top:50%;
+    left:5px;
+    color:#666666;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field input:focus~label, /*focus: elemento, se enmarca, se alza caja*/
+.txt_field input:valid~label{ /**/
+    top:-20px;
+    color:#0033ff;
+}
+.txt_field input:focus~span::before, /*focus: elemento, se enmarca, se alza caja*/
+.txt_field input:valid~span::before{ /**/
+    width:100%;
+}
+
+/*login, registro, home, home-admin, dashboard, about us,*/
+

@@ -21,3 +21,38 @@ border-box: modifica valores de contenido para que coincida con nuestro ancho y 
     /* box-sizing: content-box;*/
     margin:auto;
 }
+.static{
+    position:static; /*no se afecta por left, right, top*/
+    border:3px solid green;
+    top:400;
+    right:50px;
+}
+.relative{
+    /*afectado por otros modificadores, mueve lo que este para poder posicion*/
+   
+    position:relative;  
+    border:3px solid green;
+    top:400px;
+    left:50px;
+    width: 500px;
+    height:400px;
+}
+.fixed{
+    /*afectado por posicionamiento, se posiciona basado en la vista del usuario    */
+    position: fixed;
+    border:3px solid green;
+    top:150px;
+    left:50px;
+}
+
+.absolute{
+    /*se posiciona donde le dijimos pero no se desplaza
+        se ubica dependiendo si estuviera dentro de otro div
+    */
+    position: absolute;
+    border:3px solid green;
+    top:80px;
+    left:50px;
+    width:200px;
+    height:100px;
+}

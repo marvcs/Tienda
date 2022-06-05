@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 4, 2022, 4:09:37 PM
+    Author     : XPC
+*/
+
+.navbar{
+    height:15vh;
+    width:100%;
+    display:flex; /*como se va alinear dentro caja - */
+    align-items: center;
+    background-color: black;
+    position:fixed;
+    border-color: white;
+    z-index: 2;
+}
+.logo{
+    width:110px;
+    cursor:pointer;
+    padding-left: 100px;
+}
+.login{
+    width: 20%;
+    padding-left: 140px;
+}
+.login ul li a{ /*estilo del boton login*/
+    cursor:pointer;
+}
+div{
+    height: 15vh;
+}
+nav ul li { /*menu del centro*/
+    display: inline-block;
+    list-style:none;/*elimina los bullets*/
+    margin:0px 30px; /*espacio entre objetos*/
+    padding-left: 60px;
+    padding-right: 50px;
+}
+nav ul li a:hover,a:focus {
+   background-size: 100% 2px;
+   transition: background-size .5s;
+   color:green;
+}
+nav ul li a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none; /*quitar subrayado*/
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+body{
+    margin: 0px;
+    background: black;
+    background-attachment: fixed;
+    
+}
+
+/*de p2 unicmanete**/
+.separar{
+    position: static;
+    height: 10px;
+    background: white;
+    
+}
+.centro{
+    position: absolute;
+    top:550px;
+    left:50%;
+    width: 50%;
+    height:770px;
+    transform:translate(-50%,-50%);   
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    z-index: 1;
+}
+.centro h1 {
+    color:white;
+    text-align: center;
+}
+.centro div {
+    box-sizing: border-box;
+    color:white;
+    font-size: 18px;
+    height: 60px;
+    padding-left: 150px;
+}
+.txt_field input{
+    height: 2vh;
+    width: 75%;
+}
+.txt_field2 input{
+    height: 8vh;
+    width: 75%;
+}
+.centro img{
+    padding-left: 150px;
+    height:300px;
+    width: 70%;
+    align-content: center;
+}
+.boton{
+   margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(250%);
+  transform: translateY(50%);
+}
