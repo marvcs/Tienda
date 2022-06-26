@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Crear</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class "card-header bg-black text-white"> </div>
+            <div class="card-body"> 
+
+                <div class="container">
+                    <form th:object="${producto}"
+                          th:action="@{/save}"
+                          method="POST"
+                          >
+                        <input type = "hidden" th:field="*{producto_id}">
+                        <div class="form-group mb-3 row">
+                            <label class="col-md-2 col-form-label" for="nombre_producto">Nombre del producto</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre_producto}" placeholder="Nombre">
+                            </div>
+
+                            <label class="col-md-2 col-form-label" for="precio_producto">Precio</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{precio_producto}" placeholder="precio_producto">
+                            </div>
+
+                            <label class="col-md-2 col-form-label" for="cantidad">Cantidad</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{cantidad}" placeholder="cantidad">
+                            </div>
+
+                            
+                            <div class="form-group" mb-3 row>
+                                <label class="form-control-sm col-form-label col-md-2" for="local">Local</label>
+                                <div class="col-sm-10">
+                                    <select th:field="*{local}" class="form-control form-control-sm col-md-6" id="locales">
+                                        <option th:each="x:${local}"
+                                                th:value="${x.local_id}"
+                                                th:text="${x.nombre_local}"/>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
+                        </div>
+                    </form>
+
+                </div> <!<!-- container -->
+
+            </div> <!<!-- card body -->
+        </div> <!<!-- container -->
+    </body>
+</html>

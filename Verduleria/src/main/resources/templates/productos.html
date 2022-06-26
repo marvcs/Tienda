@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Productos</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <h1 th:text="${titulo}"></h1>
+        <table class="table table-dark table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID Producto</th>
+                    <th scope="col">NombreProducto</th>
+                    <th scope="col">PrecioProducto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Local</th>
+                </tr>
+            </thead>
+            
+        <tbody>
+            <th:block th:each="prod : ${productos}">
+                <tr> <!<!-- table row -->
+                    <td th:text="${prod.getProducto_id}"></td>
+                    <td th:text="${prod.getNombre_producto}"></td>
+                    <td th:text="${prod.getPrecio_producto}"></td>
+                    <td th:text="${prod.getCantidad}"></td>
+                    <td th:text="${prod.getLocal.getNombre_local}"></td>
+                    <td>
+                        <a th:href="@{/editProducto/{id} (id=${prod.getProducto_id})}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/delete/{id} (id=${prod.getProducto_id})}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+
+    </body>
+</html>
