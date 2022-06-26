@@ -30,7 +30,6 @@ public class Pais implements Serializable {
     private long id;
     private String pais;
 
-    
     public long getId() {
         return id;
     }
