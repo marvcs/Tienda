@@ -4,14 +4,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Persona</title>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    </head>
+    <head th:replace="plantilla/template::head"></head> <!-- como se llama de la plantilla, lo que ocupamos -->
     <body>
-
+        <header th:replace="plantilla/template::header"></header>
         <h1 th:text="${titulo}"></h1>
+        <h1 th:text="#{cliente.nombre}"></h1>
         <table class="table table-dark table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -24,7 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </tr>
             </thead>
             
-        <tbody>
+            <tbody>
             <th:block th:each="user : ${personas}">
                 <tr> <!<!-- table row -->
                     <td th:text="${user.getNombre}"></td>
@@ -42,6 +39,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </tr>
             </th:block>
         </tbody>
+        </table>
+</body>
 
-    </body>
+<footer th:replace="plantilla/template::footer"></footer>
 </html>
