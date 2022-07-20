@@ -8,7 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <header th:replace="plantilla/template::header"></header>
         <h1 th:text="${titulo}"></h1>
-        <h1 th:text="#{cliente.nombre}"></h1>
+        <h1 th:text="#{cliente.nuevo}"></h1>
         <table class="table table-dark table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -43,4 +43,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 </body>
 
 <footer th:replace="plantilla/template::footer"></footer>
+    <h1 th:text="#{cliente.datos}"></h1>
 </html>
