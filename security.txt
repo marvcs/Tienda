@@ -1,0 +1,43 @@
+userdetails > almacena la informacion del usuario 
+encapsulado
+
+getauthorities
+listas de tipo granted authority
+objeto > permisions y roles que el usuario tiene
+y los agrega al collection
+
+ROLE_ para roles ya definido por spring security 
+sino se indica entonces es un permission
+
+userService
+donde se va usar la informacion previamente almacenada
+quien gestiona username y password
+se comunica con spring security 
+userPrincipal donde se va la info
+
+@Bean
+metodo es para configuration > relacionado con @configuration
+
+@autowired > inyeccion de dependencias
+conexion entre service y repository
+
+
+
+
+WebSecurityConfigurerAdapter > todo lo q es seguridad
+
+Passwordencoder > tipo de codificacion
+
+getUserService > devolviendo el userService
+
+authenticationProvider >
+ se le setea el password encoder
+ se le setea el userDetailService
+ se devuelve el tipo de objeto
+
+configure
+> 
+
+endpoint > ruta que sigue nuestro API 
+request al backend
+
