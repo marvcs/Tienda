@@ -59,14 +59,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     
     @Override
     protected void configure (HttpSecurity http ) throws Exception{
-        http.authorizeRequests()
-                .antMatchers("/persona","/login","/personasN") //tiene acceso a..
+        http.authorizeRequests().anyRequest().permitAll();
+                
+    }
+}
+/*
+.antMatchers("/persona","/login","/personasN","/report") //tiene acceso a..
                 .hasRole("ADMIN") //siempre y cuando tenga el rol
                 .antMatchers("/persona","/","/login") //tiene acceso a..
-                .hasAnyRole("USER","VENDEDOR","ADMIN")  //siempre y cuando tenga el rol
-                .anyRequest().authenticated() //requests todos autenticados
+                .hasAnyRole("USER","VENDEDOR","ADMIN","/report")  //siempre y cuando tenga el rol
+                .anyRequest().not().authenticated() //requests todos autenticados
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll().defaultSuccessUrl("/persona",true);
-    }
-}
+
+*/

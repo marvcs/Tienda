@@ -8,7 +8,10 @@ import com.tienda.demo.entity.Pais;
 import com.tienda.demo.entity.Persona;
 import com.tienda.demo.service.IPaisService;
 import com.tienda.demo.service.IPersonaService;
+import com.tienda.demo.service.ReportService;
+import java.io.FileNotFoundException;
 import java.util.List;
+import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +31,9 @@ public class PersonaController {
     
     @Autowired
     private IPaisService paisService;
+    
+    @Autowired
+    private ReportService reportService;
 
     @GetMapping("/persona") /*url como se comunica controller con servicio*/
     public String index (Model model){ /*permite pasar variable al html*/
@@ -63,6 +69,12 @@ public class PersonaController {
     @GetMapping("/delete/{id}") /*url como se comunica controller con servicio*/
     public String editarPersona (@PathVariable("id") Long idPersona){ /*permite pasar variable al html*/
         personaService.delete(idPersona);
+        return "redirect:/persona";
+    }
+    
+        @GetMapping("/report/{format}")
+        public String generateReport(@PathVariable String format) throws FileNotFoundException, JRException{
+            reportService.exportReport(format);
         return "redirect:/persona";
     }
 }

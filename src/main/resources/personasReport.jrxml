@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_de_ventas" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="496191eb-661a-495e-8af7-8e3303bafdbb">
+	
+    <field name="id" class="java.lang.Integer">
+    </field>
+    <field name="nombre" class="java.lang.String">
+    </field>
+    <field name="apellido1" class="java.lang.String">
+    </field>
+    <field name="apellido2" class="java.lang.String">
+    </field>
+    <field name="telefono" class="java.lang.String">
+    </field>
+    <field name="email" class="java.lang.String">
+    </field>
+    <field name="paises_id" class="java.lang.Integer">
+    </field>
+    <field name="password" class="java.lang.String">
+    </field>
+    <field name="permissions" class="java.lang.String">
+    </field>
+    <field name="roles" class="java.lang.String">
+    </field>
+    <field name="active" class="java.lang.Integer">
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="80" splitType="Stretch">
+            <staticText>
+                <reportElement x="-20" y="25" width="842" height="30" uuid="ea307797-378a-499a-9034-83decff5ca46"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Berlin Sans FB Demi" size="22"/>
+                </textElement>
+                <text><![CDATA[Reporte de personas desde proyecto Tienda]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="46" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="46" splitType="Stretch">
+            <rectangle>
+                <reportElement x="-20" y="0" width="842" height="46" forecolor="#030303" backcolor="#A82D63" uuid="3c672fea-1ef4-4e0e-860c-54822adac272"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="351" y="10" width="100" height="30" uuid="17fb7e2b-4c85-4fb1-8dca-d4026ab159eb"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[telefono]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="190" y="10" width="100" height="30" uuid="60631baf-d293-4d1b-90b2-61376252daed"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[apellido]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="40" y="10" width="100" height="30" uuid="78299672-4677-4fbd-a82f-0dfddba903e8"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[nombre]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="510" y="10" width="100" height="30" uuid="762c4b5b-2f33-4b6a-9cfa-e0fb0257ac8d"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[correo]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="650" y="10" width="100" height="30" uuid="1bf9e913-f7d3-4adc-b27d-e660d92448b0"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[permisos]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="41" splitType="Stretch">
+            <textField>
+                <reportElement x="525" y="4" width="85" height="21" uuid="11315d3d-ec3e-4c4e-8075-a2820e4de8a5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="665" y="4" width="85" height="21" uuid="0e295af5-5961-4512-9d7e-5860c049c6e5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{permissions}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="366" y="4" width="85" height="21" uuid="c27f58a0-592d-464d-9cbb-d0a5a5bbeb21"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="197" y="4" width="85" height="21" uuid="7dfd4062-58f0-475b-a989-afcdb4acf503"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{apellido1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="55" y="4" width="85" height="21" uuid="d818deec-9383-420e-88c0-e83a05007304"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="421" splitType="Stretch"/>
+    </summary>
+</jasperReport>
